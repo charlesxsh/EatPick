@@ -39,6 +39,7 @@ class FavoriteTableViewController: UITableViewController {
     var favorites:[Favorite] = []
     private var emptyBackground:UIView?
     private var originalBackground:UIView?
+    var selectedFavorite:Favorite?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +80,15 @@ class FavoriteTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "show-detail"{
+            let dest = segue.destination as! BusinessDetailTableViewController
+            dest.targetFavorite = selectedFavorite
+            
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -89,6 +99,11 @@ class FavoriteTableViewController: UITableViewController {
             tableView.backgroundView = self.originalBackground
         }
         return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedFavorite = self.favorites[indexPath.row]
+        self.performSegue(withIdentifier: "show-detail", sender: self)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

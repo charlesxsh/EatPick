@@ -27,7 +27,7 @@
 		4DF3C9C41E235E20000DE8C8 /* coreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9C21E235E20000DE8C8 /* coreData.xcdatamodeld */; };
 		4DF3C9C81E23606C000DE8C8 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9C71E23606C000DE8C8 /* FavoriteTableViewController.swift */; };
 		4DF3C9CC1E236250000DE8C8 /* FavoriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9CB1E236250000DE8C8 /* FavoriteExtension.swift */; };
-		4DF3C9CF1E24289B000DE8C8 /* RandomResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9CE1E24289B000DE8C8 /* RandomResultTableViewController.swift */; };
+		4DF3C9CF1E24289B000DE8C8 /* BusinessDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9CE1E24289B000DE8C8 /* BusinessDetailTableViewController.swift */; };
 		4DF3C9D11E243572000DE8C8 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9D01E243572000DE8C8 /* UITableViewExtension.swift */; };
 		7E46A2BB5D0EE93DEE0A5B9E /* Pods_EatPickUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6817BBB8FB0F10D8DC6364FD /* Pods_EatPickUITests.framework */; };
 		85B66430DD5EE3789823F287 /* Pods_EatPickTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776EA2FA2A6CFE37C36D9E02 /* Pods_EatPickTests.framework */; };
@@ -59,6 +59,7 @@
 		4D0F06271E260BAE00D66BD1 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		4D0F06291E26105800D66BD1 /* HelpFeedbackTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpFeedbackTableViewController.swift; sourceTree = "<group>"; };
 		4D488F0E1E27164900E88EF3 /* SHLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHLocationManager.swift; sourceTree = "<group>"; };
+		4D57EE2A1E2975E0001E90B0 /* coreData 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "coreData 2.xcdatamodel"; sourceTree = "<group>"; };
 		4D5AE35A535ABFF0102D148D /* Pods-EatPickTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPickTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatPickTests/Pods-EatPickTests.release.xcconfig"; sourceTree = "<group>"; };
 		4D7D8BB41E22D20100A88118 /* EatPick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatPick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7D8BB71E22D20100A88118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +82,7 @@
 		4DF3C9C31E235E20000DE8C8 /* coreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreData.xcdatamodel; sourceTree = "<group>"; };
 		4DF3C9C71E23606C000DE8C8 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		4DF3C9CB1E236250000DE8C8 /* FavoriteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteExtension.swift; sourceTree = "<group>"; };
-		4DF3C9CE1E24289B000DE8C8 /* RandomResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomResultTableViewController.swift; sourceTree = "<group>"; };
+		4DF3C9CE1E24289B000DE8C8 /* BusinessDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessDetailTableViewController.swift; sourceTree = "<group>"; };
 		4DF3C9D01E243572000DE8C8 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		6817BBB8FB0F10D8DC6364FD /* Pods_EatPickUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatPickUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7271200138F453F70762746F /* Pods-EatPickTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPickTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatPickTests/Pods-EatPickTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,7 +202,7 @@
 				4D7D8BB91E22D20100A88118 /* MainViewController.swift */,
 				4D7D8BBB1E22D20100A88118 /* SearchResultTableViewController.swift */,
 				4DF3C9C71E23606C000DE8C8 /* FavoriteTableViewController.swift */,
-				4DF3C9CE1E24289B000DE8C8 /* RandomResultTableViewController.swift */,
+				4DF3C9CE1E24289B000DE8C8 /* BusinessDetailTableViewController.swift */,
 				4D0F06271E260BAE00D66BD1 /* SettingsTableViewController.swift */,
 				4D0F06291E26105800D66BD1 /* HelpFeedbackTableViewController.swift */,
 			);
@@ -545,7 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D7D8BE81E22D48000A88118 /* YelpAPI.swift in Sources */,
-				4DF3C9CF1E24289B000DE8C8 /* RandomResultTableViewController.swift in Sources */,
+				4DF3C9CF1E24289B000DE8C8 /* BusinessDetailTableViewController.swift in Sources */,
 				4DF3C9C81E23606C000DE8C8 /* FavoriteTableViewController.swift in Sources */,
 				4D85FA251E244B87005C4D29 /* ArrayExtension.swift in Sources */,
 				4D7D8BBC1E22D20100A88118 /* SearchResultTableViewController.swift in Sources */,
@@ -841,9 +842,10 @@
 		4DF3C9C21E235E20000DE8C8 /* coreData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				4D57EE2A1E2975E0001E90B0 /* coreData 2.xcdatamodel */,
 				4DF3C9C31E235E20000DE8C8 /* coreData.xcdatamodel */,
 			);
-			currentVersion = 4DF3C9C31E235E20000DE8C8 /* coreData.xcdatamodel */;
+			currentVersion = 4D57EE2A1E2975E0001E90B0 /* coreData 2.xcdatamodel */;
 			path = coreData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

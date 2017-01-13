@@ -25,6 +25,24 @@ extension Favorite{
         self.managedObjectContext!.delete(self)
     }
     
+    public static func isExistObject(ById businessId:String)->Bool{
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            log.error("Cannot get app delegate")
+            return false
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<Favorite>(entityName: "Favorite")
+        fetchRequest.predicate = NSPredicate(format: "businessId == %@", businessId)
+        fetchRequest.fetchLimit = 1
+        do{
+            let count = try managedContext.count(for: fetchRequest)
+            if count == 0 {return false}
+            else {return true}
+        }catch let error{
+            log.error(error.localizedDescription)
+        }
+        return false
+    }
     static func randomPickOne()->Favorite?{
         var favorites:[Favorite]?
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {

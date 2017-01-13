@@ -20,16 +20,25 @@ class SRCell:UITableViewCell{
     @IBOutlet weak var add:UIButton!
     public var businessObject:[String:Any]?{
         didSet{
-            self.name.text = businessObject!.getString(By: "name")
+            guard let businessObject = businessObject else{
+                return
+            }
+            self.name.text = businessObject.getString(By: "name")
             //handle business address
-            let locationObject = businessObject!["location"] as! [String:AnyObject]
+            let locationObject = businessObject["location"] as! [String:AnyObject]
             let address = locationObject.getString(By: "address1")
             let city = locationObject.getString(By: "city")
             let state = locationObject.getString(By: "state")
             self.address.text = "\(address), \(city), \(state)"
             //handle business image
-            let imageUrl = businessObject!["image_url"] as! String
+            let imageUrl = businessObject["image_url"] as! String
             self.photo.sd_setImage(with: URL(string:imageUrl))
+            
+            if Favorite.isExistObject(ById: businessObject.getString(By: "id")){
+                self.add.clicked()
+            }else{
+                self.add.unClicked()
+            }
         }
     }
     
@@ -59,8 +68,16 @@ class SRCell:UITableViewCell{
             newFavorite.longitude = coordinates["longitude"] as! Float
             
             newFavorite.phone = businessObject!.getString(By: "phone")
-            self.add.setImage(UIImage(named: "click-icon"), for: .normal)
-            self.add.isUserInteractionEnabled = false
+            
+            let categories = businessObject!["categories"] as! [[String:String]]
+            var cateString = ""
+            for c in categories{
+                cateString.append("\(c["title"]!) & ")
+            }
+            cateString.remove(at: cateString.index(cateString.endIndex, offsetBy: -2))
+            newFavorite.category =  cateString
+
+            self.add.clicked()
         }
         
         
@@ -89,9 +106,15 @@ class SearchResultTableViewController: UITableViewController,UISearchResultsUpda
         currentLocation = locationManager.currentLocation!
     }
     
-        override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.searchResults = nil
+        self.tableView.reloadData()
     }
     
     func refreshTable(sender:Any){

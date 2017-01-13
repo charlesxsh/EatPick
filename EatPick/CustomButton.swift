@@ -8,33 +8,17 @@
 
 import UIKit
 
-class CustomButton: UIButton {
-    @IBInspectable var cornerRadius: CGFloat = 2 {
-        didSet {
-            layer.cornerRadius = cornerRadius
-            layer.masksToBounds = cornerRadius > 0
-        }
-    }
-    @IBInspectable var borderWidth: CGFloat = 1 {
-        didSet {
-            layer.borderWidth = borderWidth
-        }
-    }
-    @IBInspectable var borderColor: UIColor? = UIColor.white {
-        didSet {
-            layer.borderColor = borderColor?.cgColor
-        }
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-}
+
 extension UIButton{
+    func unClicked(){
+        self.setImage(UIImage(named: "plus-icon"), for: .normal)
+
+    }
+    func clicked(){
+        self.setImage(UIImage(named: "click-icon"), for: .normal)
+        self.isUserInteractionEnabled = false
+    }
+    
     func runIndicatorWith(task:()->Void){
         let indicator = UIActivityIndicatorView()
         let buttonHeight = self.bounds.size.height

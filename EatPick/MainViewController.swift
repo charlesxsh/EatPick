@@ -114,7 +114,7 @@ class MainViewController: UIViewController,UISearchBarDelegate,UISearchControlle
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dest = segue.destination as! RandomResultTableViewController
+        let dest = segue.destination as! BusinessDetailTableViewController
         dest.targetFavorite = self.pickedFavorite
     }
     
