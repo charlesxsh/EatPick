@@ -1,0 +1,6 @@
+framework module Pods_EatPickUITests {
+  umbrella header "Pods-EatPickUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

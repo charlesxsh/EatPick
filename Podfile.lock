@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.2.0)
+  - FCAlertView (1.2.9)
+  - NVActivityIndicatorView (3.1)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - XCGLogger (4.0.0):
+    - XCGLogger/Core (= 4.0.0)
+  - XCGLogger/Core (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - FCAlertView
+  - NVActivityIndicatorView
+  - SDWebImage (~> 3.8)
+  - XCGLogger (~> 4.0.0)
+
+SPEC CHECKSUMS:
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  FCAlertView: 60a6e16609d1458e16752f1918c2c43644c390ea
+  NVActivityIndicatorView: 9f47e8a4affb860ef729aeec99b1550219e6c233
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
+
+PODFILE CHECKSUM: c191d272ae8ecab2e5ad471692c9e30aca9e977f
+
+COCOAPODS: 1.1.1

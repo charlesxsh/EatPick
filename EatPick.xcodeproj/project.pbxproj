@@ -1,0 +1,854 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FBA6174B514E6311AB839B6 /* Pods_EatPick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EA657EFB2EACAAECD0BA80 /* Pods_EatPick.framework */; };
+		263BFEDE52C5B58F5FF76657 /* Pods_EatPick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4297EF6362EF17F88B71DB74 /* Pods_EatPick.framework */; };
+		4D0F06281E260BAE00D66BD1 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F06271E260BAE00D66BD1 /* SettingsTableViewController.swift */; };
+		4D0F062A1E26105800D66BD1 /* HelpFeedbackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F06291E26105800D66BD1 /* HelpFeedbackTableViewController.swift */; };
+		4D488F0F1E27164900E88EF3 /* SHLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D488F0E1E27164900E88EF3 /* SHLocationManager.swift */; };
+		4D7D8BB81E22D20100A88118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D8BB71E22D20100A88118 /* AppDelegate.swift */; };
+		4D7D8BBA1E22D20100A88118 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D8BB91E22D20100A88118 /* MainViewController.swift */; };
+		4D7D8BBC1E22D20100A88118 /* SearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D8BBB1E22D20100A88118 /* SearchResultTableViewController.swift */; };
+		4D7D8BBF1E22D20100A88118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D8BBD1E22D20100A88118 /* Main.storyboard */; };
+		4D7D8BC11E22D20100A88118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D8BC01E22D20100A88118 /* Assets.xcassets */; };
+		4D7D8BC41E22D20100A88118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D8BC21E22D20100A88118 /* LaunchScreen.storyboard */; };
+		4D7D8BCF1E22D20100A88118 /* EatPickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D8BCE1E22D20100A88118 /* EatPickTests.swift */; };
+		4D7D8BDA1E22D20100A88118 /* EatPickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D8BD91E22D20100A88118 /* EatPickUITests.swift */; };
+		4D7D8BE81E22D48000A88118 /* YelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D8BE71E22D48000A88118 /* YelpAPI.swift */; };
+		4D85FA251E244B87005C4D29 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D85FA241E244B87005C4D29 /* ArrayExtension.swift */; };
+		4DF3C9821E233CE5000DE8C8 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9811E233CE5000DE8C8 /* DictionaryExtension.swift */; };
+		4DF3C9841E233E04000DE8C8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9831E233E04000DE8C8 /* CustomButton.swift */; };
+		4DF3C9C41E235E20000DE8C8 /* coreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9C21E235E20000DE8C8 /* coreData.xcdatamodeld */; };
+		4DF3C9C81E23606C000DE8C8 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9C71E23606C000DE8C8 /* FavoriteTableViewController.swift */; };
+		4DF3C9CC1E236250000DE8C8 /* FavoriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9CB1E236250000DE8C8 /* FavoriteExtension.swift */; };
+		4DF3C9CF1E24289B000DE8C8 /* RandomResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9CE1E24289B000DE8C8 /* RandomResultTableViewController.swift */; };
+		4DF3C9D11E243572000DE8C8 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9D01E243572000DE8C8 /* UITableViewExtension.swift */; };
+		7E46A2BB5D0EE93DEE0A5B9E /* Pods_EatPickUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6817BBB8FB0F10D8DC6364FD /* Pods_EatPickUITests.framework */; };
+		85B66430DD5EE3789823F287 /* Pods_EatPickTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776EA2FA2A6CFE37C36D9E02 /* Pods_EatPickTests.framework */; };
+		A73B25E4D14B54F9D754A272 /* Pods_EatPickUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1FF23F27A242836EEC42D7 /* Pods_EatPickUITests.framework */; };
+		BE80C0EAD5C9769D197A3A29 /* Pods_EatPickTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C779522888933B3E3C2A203 /* Pods_EatPickTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D7D8BCB1E22D20100A88118 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D7D8BAC1E22D20100A88118 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D7D8BB31E22D20100A88118;
+			remoteInfo = EatPick;
+		};
+		4D7D8BD61E22D20100A88118 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D7D8BAC1E22D20100A88118 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D7D8BB31E22D20100A88118;
+			remoteInfo = EatPick;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		12C5EA57BF5369106C4D4816 /* Pods-EatPickUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPickUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatPickUITests/Pods-EatPickUITests.release.xcconfig"; sourceTree = "<group>"; };
+		16EA657EFB2EACAAECD0BA80 /* Pods_EatPick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatPick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4297EF6362EF17F88B71DB74 /* Pods_EatPick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatPick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D0F06271E260BAE00D66BD1 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		4D0F06291E26105800D66BD1 /* HelpFeedbackTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpFeedbackTableViewController.swift; sourceTree = "<group>"; };
+		4D488F0E1E27164900E88EF3 /* SHLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHLocationManager.swift; sourceTree = "<group>"; };
+		4D5AE35A535ABFF0102D148D /* Pods-EatPickTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPickTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatPickTests/Pods-EatPickTests.release.xcconfig"; sourceTree = "<group>"; };
+		4D7D8BB41E22D20100A88118 /* EatPick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatPick.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D7D8BB71E22D20100A88118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4D7D8BB91E22D20100A88118 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4D7D8BBB1E22D20100A88118 /* SearchResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewController.swift; sourceTree = "<group>"; };
+		4D7D8BBE1E22D20100A88118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D7D8BC01E22D20100A88118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D7D8BC31E22D20100A88118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D7D8BC51E22D20100A88118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D7D8BCA1E22D20100A88118 /* EatPickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EatPickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D7D8BCE1E22D20100A88118 /* EatPickTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatPickTests.swift; sourceTree = "<group>"; };
+		4D7D8BD01E22D20100A88118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D7D8BD51E22D20100A88118 /* EatPickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EatPickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D7D8BD91E22D20100A88118 /* EatPickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatPickUITests.swift; sourceTree = "<group>"; };
+		4D7D8BDB1E22D20100A88118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D7D8BE71E22D48000A88118 /* YelpAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPI.swift; sourceTree = "<group>"; };
+		4D85FA241E244B87005C4D29 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		4DF3C9811E233CE5000DE8C8 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		4DF3C9831E233E04000DE8C8 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		4DF3C9C31E235E20000DE8C8 /* coreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreData.xcdatamodel; sourceTree = "<group>"; };
+		4DF3C9C71E23606C000DE8C8 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
+		4DF3C9CB1E236250000DE8C8 /* FavoriteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteExtension.swift; sourceTree = "<group>"; };
+		4DF3C9CE1E24289B000DE8C8 /* RandomResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomResultTableViewController.swift; sourceTree = "<group>"; };
+		4DF3C9D01E243572000DE8C8 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		6817BBB8FB0F10D8DC6364FD /* Pods_EatPickUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatPickUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7271200138F453F70762746F /* Pods-EatPickTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPickTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatPickTests/Pods-EatPickTests.release.xcconfig"; sourceTree = "<group>"; };
+		776EA2FA2A6CFE37C36D9E02 /* Pods_EatPickTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatPickTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C779522888933B3E3C2A203 /* Pods_EatPickTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatPickTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FEBB9D5A194363F64B6A6F2 /* Pods-EatPick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPick.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatPick/Pods-EatPick.release.xcconfig"; sourceTree = "<group>"; };
+		896510F1E631BCDC0F5CA203 /* Pods-EatPick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatPick/Pods-EatPick.debug.xcconfig"; sourceTree = "<group>"; };
+		913DEB33D3AB49569EB709FD /* Pods-EatPick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatPick/Pods-EatPick.debug.xcconfig"; sourceTree = "<group>"; };
+		9A1FF23F27A242836EEC42D7 /* Pods_EatPickUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatPickUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A984ACF1ADBED6CA33FCB674 /* Pods-EatPickUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPickUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatPickUITests/Pods-EatPickUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC627958094F587ADFCD1A91 /* Pods-EatPickTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPickTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatPickTests/Pods-EatPickTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D6E0728C7B424E48D0494714 /* Pods-EatPickUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPickUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatPickUITests/Pods-EatPickUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC87D32A49B2899FFA32D8B5 /* Pods-EatPickTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPickTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatPickTests/Pods-EatPickTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E49BF260FE260D0E5AFF4528 /* Pods-EatPick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPick.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatPick/Pods-EatPick.release.xcconfig"; sourceTree = "<group>"; };
+		E6FBDA9C79E8B1ADA1E205E9 /* Pods-EatPickUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPickUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatPickUITests/Pods-EatPickUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D7D8BB11E22D20100A88118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FBA6174B514E6311AB839B6 /* Pods_EatPick.framework in Frameworks */,
+				263BFEDE52C5B58F5FF76657 /* Pods_EatPick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D7D8BC71E22D20100A88118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85B66430DD5EE3789823F287 /* Pods_EatPickTests.framework in Frameworks */,
+				BE80C0EAD5C9769D197A3A29 /* Pods_EatPickTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D7D8BD21E22D20100A88118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A73B25E4D14B54F9D754A272 /* Pods_EatPickUITests.framework in Frameworks */,
+				7E46A2BB5D0EE93DEE0A5B9E /* Pods_EatPickUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D488F0D1E2715F500E88EF3 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				4D7D8BE71E22D48000A88118 /* YelpAPI.swift */,
+				4D488F0E1E27164900E88EF3 /* SHLocationManager.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		4D7D8BAB1E22D20100A88118 = {
+			isa = PBXGroup;
+			children = (
+				4D7D8BB61E22D20100A88118 /* EatPick */,
+				4D7D8BCD1E22D20100A88118 /* EatPickTests */,
+				4D7D8BD81E22D20100A88118 /* EatPickUITests */,
+				4D7D8BB51E22D20100A88118 /* Products */,
+				66B233550A7FD6F15057CEA9 /* Pods */,
+				DC1F2836321306E602A1DCDD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4D7D8BB51E22D20100A88118 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D7D8BB41E22D20100A88118 /* EatPick.app */,
+				4D7D8BCA1E22D20100A88118 /* EatPickTests.xctest */,
+				4D7D8BD51E22D20100A88118 /* EatPickUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D7D8BB61E22D20100A88118 /* EatPick */ = {
+			isa = PBXGroup;
+			children = (
+				4D488F0D1E2715F500E88EF3 /* Util */,
+				4DF3C9CD1E236255000DE8C8 /* Extension */,
+				4DF3C9CA1E236114000DE8C8 /* Storyboard */,
+				4DF3C9C91E236103000DE8C8 /* ViewController */,
+				4D7D8BB71E22D20100A88118 /* AppDelegate.swift */,
+				4D7D8BC01E22D20100A88118 /* Assets.xcassets */,
+				4D7D8BC51E22D20100A88118 /* Info.plist */,
+				4DF3C9831E233E04000DE8C8 /* CustomButton.swift */,
+				4DF3C9C21E235E20000DE8C8 /* coreData.xcdatamodeld */,
+			);
+			path = EatPick;
+			sourceTree = "<group>";
+		};
+		4D7D8BCD1E22D20100A88118 /* EatPickTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D7D8BCE1E22D20100A88118 /* EatPickTests.swift */,
+				4D7D8BD01E22D20100A88118 /* Info.plist */,
+			);
+			path = EatPickTests;
+			sourceTree = "<group>";
+		};
+		4D7D8BD81E22D20100A88118 /* EatPickUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4D7D8BD91E22D20100A88118 /* EatPickUITests.swift */,
+				4D7D8BDB1E22D20100A88118 /* Info.plist */,
+			);
+			path = EatPickUITests;
+			sourceTree = "<group>";
+		};
+		4DF3C9C91E236103000DE8C8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4D7D8BB91E22D20100A88118 /* MainViewController.swift */,
+				4D7D8BBB1E22D20100A88118 /* SearchResultTableViewController.swift */,
+				4DF3C9C71E23606C000DE8C8 /* FavoriteTableViewController.swift */,
+				4DF3C9CE1E24289B000DE8C8 /* RandomResultTableViewController.swift */,
+				4D0F06271E260BAE00D66BD1 /* SettingsTableViewController.swift */,
+				4D0F06291E26105800D66BD1 /* HelpFeedbackTableViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		4DF3C9CA1E236114000DE8C8 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4D7D8BBD1E22D20100A88118 /* Main.storyboard */,
+				4D7D8BC21E22D20100A88118 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		4DF3C9CD1E236255000DE8C8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4DF3C9811E233CE5000DE8C8 /* DictionaryExtension.swift */,
+				4DF3C9CB1E236250000DE8C8 /* FavoriteExtension.swift */,
+				4DF3C9D01E243572000DE8C8 /* UITableViewExtension.swift */,
+				4D85FA241E244B87005C4D29 /* ArrayExtension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		66B233550A7FD6F15057CEA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				896510F1E631BCDC0F5CA203 /* Pods-EatPick.debug.xcconfig */,
+				E49BF260FE260D0E5AFF4528 /* Pods-EatPick.release.xcconfig */,
+				AC627958094F587ADFCD1A91 /* Pods-EatPickTests.debug.xcconfig */,
+				7271200138F453F70762746F /* Pods-EatPickTests.release.xcconfig */,
+				A984ACF1ADBED6CA33FCB674 /* Pods-EatPickUITests.debug.xcconfig */,
+				E6FBDA9C79E8B1ADA1E205E9 /* Pods-EatPickUITests.release.xcconfig */,
+				913DEB33D3AB49569EB709FD /* Pods-EatPick.debug.xcconfig */,
+				7FEBB9D5A194363F64B6A6F2 /* Pods-EatPick.release.xcconfig */,
+				DC87D32A49B2899FFA32D8B5 /* Pods-EatPickTests.debug.xcconfig */,
+				4D5AE35A535ABFF0102D148D /* Pods-EatPickTests.release.xcconfig */,
+				D6E0728C7B424E48D0494714 /* Pods-EatPickUITests.debug.xcconfig */,
+				12C5EA57BF5369106C4D4816 /* Pods-EatPickUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC1F2836321306E602A1DCDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16EA657EFB2EACAAECD0BA80 /* Pods_EatPick.framework */,
+				776EA2FA2A6CFE37C36D9E02 /* Pods_EatPickTests.framework */,
+				9A1FF23F27A242836EEC42D7 /* Pods_EatPickUITests.framework */,
+				4297EF6362EF17F88B71DB74 /* Pods_EatPick.framework */,
+				7C779522888933B3E3C2A203 /* Pods_EatPickTests.framework */,
+				6817BBB8FB0F10D8DC6364FD /* Pods_EatPickUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D7D8BB31E22D20100A88118 /* EatPick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D7D8BDE1E22D20100A88118 /* Build configuration list for PBXNativeTarget "EatPick" */;
+			buildPhases = (
+				AFBB964DB169F5FCE5D7F227 /* [CP] Check Pods Manifest.lock */,
+				4D7D8BB01E22D20100A88118 /* Sources */,
+				4D7D8BB11E22D20100A88118 /* Frameworks */,
+				4D7D8BB21E22D20100A88118 /* Resources */,
+				5E083DFCBB80B876CE88C68B /* [CP] Embed Pods Frameworks */,
+				945D9787B85B9DF5701D0C2D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EatPick;
+			productName = EatPick;
+			productReference = 4D7D8BB41E22D20100A88118 /* EatPick.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4D7D8BC91E22D20100A88118 /* EatPickTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D7D8BE11E22D20100A88118 /* Build configuration list for PBXNativeTarget "EatPickTests" */;
+			buildPhases = (
+				EE7A69C1C59C52406FA14CE2 /* [CP] Check Pods Manifest.lock */,
+				4D7D8BC61E22D20100A88118 /* Sources */,
+				4D7D8BC71E22D20100A88118 /* Frameworks */,
+				4D7D8BC81E22D20100A88118 /* Resources */,
+				04F9AE9F221AF38B735BAD33 /* [CP] Embed Pods Frameworks */,
+				11E50DF5F6C39B80EE1ED054 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D7D8BCC1E22D20100A88118 /* PBXTargetDependency */,
+			);
+			name = EatPickTests;
+			productName = EatPickTests;
+			productReference = 4D7D8BCA1E22D20100A88118 /* EatPickTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4D7D8BD41E22D20100A88118 /* EatPickUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D7D8BE41E22D20100A88118 /* Build configuration list for PBXNativeTarget "EatPickUITests" */;
+			buildPhases = (
+				DFAE24F04C383BE27FB6F0AF /* [CP] Check Pods Manifest.lock */,
+				4D7D8BD11E22D20100A88118 /* Sources */,
+				4D7D8BD21E22D20100A88118 /* Frameworks */,
+				4D7D8BD31E22D20100A88118 /* Resources */,
+				24F7509735DF9D6A889DEAA5 /* [CP] Embed Pods Frameworks */,
+				72B8B5D867CAD284070B30F0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D7D8BD71E22D20100A88118 /* PBXTargetDependency */,
+			);
+			name = EatPickUITests;
+			productName = EatPickUITests;
+			productReference = 4D7D8BD51E22D20100A88118 /* EatPickUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D7D8BAC1E22D20100A88118 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Shihao Xia";
+				TargetAttributes = {
+					4D7D8BB31E22D20100A88118 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = J8TELHFDPB;
+						ProvisioningStyle = Automatic;
+					};
+					4D7D8BC91E22D20100A88118 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = J8TELHFDPB;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4D7D8BB31E22D20100A88118;
+					};
+					4D7D8BD41E22D20100A88118 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = J8TELHFDPB;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4D7D8BB31E22D20100A88118;
+					};
+				};
+			};
+			buildConfigurationList = 4D7D8BAF1E22D20100A88118 /* Build configuration list for PBXProject "EatPick" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D7D8BAB1E22D20100A88118;
+			productRefGroup = 4D7D8BB51E22D20100A88118 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D7D8BB31E22D20100A88118 /* EatPick */,
+				4D7D8BC91E22D20100A88118 /* EatPickTests */,
+				4D7D8BD41E22D20100A88118 /* EatPickUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D7D8BB21E22D20100A88118 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D7D8BC41E22D20100A88118 /* LaunchScreen.storyboard in Resources */,
+				4D7D8BC11E22D20100A88118 /* Assets.xcassets in Resources */,
+				4D7D8BBF1E22D20100A88118 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D7D8BC81E22D20100A88118 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D7D8BD31E22D20100A88118 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04F9AE9F221AF38B735BAD33 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatPickTests/Pods-EatPickTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11E50DF5F6C39B80EE1ED054 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatPickTests/Pods-EatPickTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24F7509735DF9D6A889DEAA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatPickUITests/Pods-EatPickUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E083DFCBB80B876CE88C68B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatPick/Pods-EatPick-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72B8B5D867CAD284070B30F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatPickUITests/Pods-EatPickUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		945D9787B85B9DF5701D0C2D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatPick/Pods-EatPick-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFBB964DB169F5FCE5D7F227 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DFAE24F04C383BE27FB6F0AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE7A69C1C59C52406FA14CE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D7D8BB01E22D20100A88118 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D7D8BE81E22D48000A88118 /* YelpAPI.swift in Sources */,
+				4DF3C9CF1E24289B000DE8C8 /* RandomResultTableViewController.swift in Sources */,
+				4DF3C9C81E23606C000DE8C8 /* FavoriteTableViewController.swift in Sources */,
+				4D85FA251E244B87005C4D29 /* ArrayExtension.swift in Sources */,
+				4D7D8BBC1E22D20100A88118 /* SearchResultTableViewController.swift in Sources */,
+				4DF3C9841E233E04000DE8C8 /* CustomButton.swift in Sources */,
+				4DF3C9D11E243572000DE8C8 /* UITableViewExtension.swift in Sources */,
+				4D0F062A1E26105800D66BD1 /* HelpFeedbackTableViewController.swift in Sources */,
+				4DF3C9821E233CE5000DE8C8 /* DictionaryExtension.swift in Sources */,
+				4D7D8BB81E22D20100A88118 /* AppDelegate.swift in Sources */,
+				4D488F0F1E27164900E88EF3 /* SHLocationManager.swift in Sources */,
+				4DF3C9C41E235E20000DE8C8 /* coreData.xcdatamodeld in Sources */,
+				4D0F06281E260BAE00D66BD1 /* SettingsTableViewController.swift in Sources */,
+				4DF3C9CC1E236250000DE8C8 /* FavoriteExtension.swift in Sources */,
+				4D7D8BBA1E22D20100A88118 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D7D8BC61E22D20100A88118 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D7D8BCF1E22D20100A88118 /* EatPickTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D7D8BD11E22D20100A88118 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D7D8BDA1E22D20100A88118 /* EatPickUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D7D8BCC1E22D20100A88118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D7D8BB31E22D20100A88118 /* EatPick */;
+			targetProxy = 4D7D8BCB1E22D20100A88118 /* PBXContainerItemProxy */;
+		};
+		4D7D8BD71E22D20100A88118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D7D8BB31E22D20100A88118 /* EatPick */;
+			targetProxy = 4D7D8BD61E22D20100A88118 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4D7D8BBD1E22D20100A88118 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D7D8BBE1E22D20100A88118 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4D7D8BC21E22D20100A88118 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D7D8BC31E22D20100A88118 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D7D8BDC1E22D20100A88118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4D7D8BDD1E22D20100A88118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D7D8BDF1E22D20100A88118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 913DEB33D3AB49569EB709FD /* Pods-EatPick.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J8TELHFDPB;
+				INFOPLIST_FILE = EatPick/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = shihao.Where2Eat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4D7D8BE01E22D20100A88118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FEBB9D5A194363F64B6A6F2 /* Pods-EatPick.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J8TELHFDPB;
+				INFOPLIST_FILE = EatPick/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = shihao.Where2Eat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		4D7D8BE21E22D20100A88118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC87D32A49B2899FFA32D8B5 /* Pods-EatPickTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = J8TELHFDPB;
+				INFOPLIST_FILE = EatPickTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = shihao.EatPickTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EatPick.app/EatPick";
+			};
+			name = Debug;
+		};
+		4D7D8BE31E22D20100A88118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D5AE35A535ABFF0102D148D /* Pods-EatPickTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = J8TELHFDPB;
+				INFOPLIST_FILE = EatPickTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = shihao.EatPickTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EatPick.app/EatPick";
+			};
+			name = Release;
+		};
+		4D7D8BE51E22D20100A88118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6E0728C7B424E48D0494714 /* Pods-EatPickUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = J8TELHFDPB;
+				INFOPLIST_FILE = EatPickUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = shihao.EatPickUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = EatPick;
+			};
+			name = Debug;
+		};
+		4D7D8BE61E22D20100A88118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12C5EA57BF5369106C4D4816 /* Pods-EatPickUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = J8TELHFDPB;
+				INFOPLIST_FILE = EatPickUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = shihao.EatPickUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = EatPick;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D7D8BAF1E22D20100A88118 /* Build configuration list for PBXProject "EatPick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D7D8BDC1E22D20100A88118 /* Debug */,
+				4D7D8BDD1E22D20100A88118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D7D8BDE1E22D20100A88118 /* Build configuration list for PBXNativeTarget "EatPick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D7D8BDF1E22D20100A88118 /* Debug */,
+				4D7D8BE01E22D20100A88118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D7D8BE11E22D20100A88118 /* Build configuration list for PBXNativeTarget "EatPickTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D7D8BE21E22D20100A88118 /* Debug */,
+				4D7D8BE31E22D20100A88118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D7D8BE41E22D20100A88118 /* Build configuration list for PBXNativeTarget "EatPickUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D7D8BE51E22D20100A88118 /* Debug */,
+				4D7D8BE61E22D20100A88118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4DF3C9C21E235E20000DE8C8 /* coreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4DF3C9C31E235E20000DE8C8 /* coreData.xcdatamodel */,
+			);
+			currentVersion = 4DF3C9C31E235E20000DE8C8 /* coreData.xcdatamodel */;
+			path = coreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4D7D8BAC1E22D20100A88118 /* Project object */;
+}
