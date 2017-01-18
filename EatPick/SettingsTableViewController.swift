@@ -8,11 +8,29 @@
 
 import UIKit
 
-enum Setting:Int{
-    case about = 0
-    case help = 1
-    case rate = 2
+enum Setting:Int {
+    
+    //sec1
+    case preference = 0
+    
+    //sec2
+    case about = 1
+    case help = 2
+    case rate = 3
+    
+    static func getSetting(ByIndexPath indexPath:IndexPath)->Setting?{
+        if  indexPath.section == 0{
+            return Setting(rawValue: indexPath.row)
+        }else if indexPath.section == 1{
+            return Setting(rawValue: indexPath.row+1) //1 is sum of number of rows in previous section
+        }
+        
+        return nil
+        
+    }
 }
+
+
 class SettingsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -25,18 +43,21 @@ class SettingsTableViewController: UITableViewController {
     }
     
     func onClickRateMe(){
-        UIApplication.shared.open(URL(string: "itms-apps://itunes.apple.com/app/id1193464496")!, options: [:]) { (isSuccess) in
+        Util.UIApplicationOpen(url:URL(string: "itms-apps://itunes.apple.com/app/id1193464496")!, options: [:], completionHandler: { (isSuccess) in
             if !isSuccess {
                 log.error("Can not open itunes")
             }
-        }
+
+        })
 
     }
+    
+    
 }
 
 extension SettingsTableViewController{
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let settingType = Setting(rawValue: indexPath.row) else {
+        guard let settingType = Setting.getSetting(ByIndexPath: indexPath) else {
             return
         }
         switch settingType {

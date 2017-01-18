@@ -46,6 +46,7 @@ class SRCell:UITableViewCell{
         super.awakeFromNib()
         self.photo.layer.cornerRadius = 5
         self.photo.clipsToBounds = true
+        self.add.cornerRadius = 5
     }
     
     
@@ -86,14 +87,18 @@ class SRCell:UITableViewCell{
  }
 }
 
-class SearchResultTableViewController: UITableViewController,UISearchResultsUpdating,NVActivityIndicatorViewable {
+class SearchResultTableViewController: UITableViewController,UISearchResultsUpdating,UISearchBarDelegate {
     
     var yelpApi:YelpAPI?
     var searchText:String?
     var searchResults:[[String:Any]]?
     var previousRequest:DataRequest?
     var currentLocation:CLLocationCoordinate2D?
+    var searchTimer:Timer?
+    private var emptyBackground:UIView?
+    private var originalBackground:UIView?
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -104,7 +109,10 @@ class SearchResultTableViewController: UITableViewController,UISearchResultsUpda
         self.refreshControl = UIRefreshControl()
         self.refreshControl!.addTarget(self, action: #selector(refreshTable(sender:)), for: .valueChanged)
         currentLocation = locationManager.currentLocation!
+        emptyBackground = self.emptyMessage(message: "Found nothing")
+        originalBackground = self.tableView.backgroundView
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -128,7 +136,7 @@ class SearchResultTableViewController: UITableViewController,UISearchResultsUpda
         if previousRequest != nil {
             previousRequest!.cancel()
         }
-        previousRequest = yelpApi?.businessSearch(With: self.searchText!, Location: self.currentLocation!, handler: { (response) in
+        previousRequest = yelpApi?.businessSearch(With: self.searchText!, Option:["limit":12] ,Location: self.currentLocation!, handler: { (response) in
             switch response.result{
             case .success(let value):
                 let json = value as! [String:Any]
@@ -143,15 +151,21 @@ class SearchResultTableViewController: UITableViewController,UISearchResultsUpda
     
     
     func updateSearchResults(for searchController: UISearchController) {
-        
         self.searchText = searchController.searchBar.text
         guard self.searchText != nil else {
             return
         }
-        self.refreshControl?.sendActions(for: .valueChanged)
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(refreshTable(sender:)), object: nil)
+        self.perform(#selector(refreshTable(sender:)), with: nil, afterDelay: 0.2)
+
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
+        if (self.searchResults != nil) && self.searchResults!.isEmpty {
+            tableView.backgroundView = self.emptyBackground!
+        }else{
+            tableView.backgroundView = self.originalBackground
+        }
         return 1
     }
     
@@ -164,6 +178,29 @@ class SearchResultTableViewController: UITableViewController,UISearchResultsUpda
         //handle business name
         cell.businessObject = self.searchResults![indexPath.row]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let rows = self.searchResults else {return}
+        let shouldLoadRow = rows.count - 3
+        if indexPath.row == shouldLoadRow{
+            let offset = rows.count
+            _ = yelpApi?.businessSearch(With: self.searchText!,Option:["offset":offset,"limit":8], Location: self.currentLocation!, handler: { (response) in
+                switch response.result{
+                case .success(let value):
+                    let json = value as! [String:Any]
+                    guard let offsetResults = json["businesses"] as? [[String:Any]] else {
+                        return
+                    }
+                    self.searchResults?.append(contentsOf: offsetResults)
+                    self.tableView.reloadData()
+                case .failure(let error):
+                    log.error(error.localizedDescription)
+                }
+                self.refreshControl!.endRefreshing()
+            })
+
+        }
     }
     
     

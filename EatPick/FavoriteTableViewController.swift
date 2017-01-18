@@ -64,7 +64,7 @@ class FavoriteTableViewController: UITableViewController {
             return
         }
         let managedContext =
-            appDelegate.persistentContainer.viewContext
+            appDelegate.managedObjectContext
         let fetchRequest =
             NSFetchRequest<Favorite>(entityName: "Favorite")
         do {

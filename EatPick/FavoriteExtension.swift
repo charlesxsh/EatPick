@@ -15,7 +15,7 @@ extension Favorite{
             log.error("Cannot get app delegate")
             return nil
         }
-        let managedContext = appDelegate.persistentContainer.viewContext
+        let managedContext = appDelegate.managedObjectContext
         let entity = NSEntityDescription.entity(forEntityName: "Favorite", in: managedContext)
         let newFavorite = Favorite(entity: entity!, insertInto: managedContext)
         return newFavorite
@@ -30,7 +30,7 @@ extension Favorite{
             log.error("Cannot get app delegate")
             return false
         }
-        let managedContext = appDelegate.persistentContainer.viewContext
+        let managedContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest<Favorite>(entityName: "Favorite")
         fetchRequest.predicate = NSPredicate(format: "businessId == %@", businessId)
         fetchRequest.fetchLimit = 1
@@ -50,7 +50,7 @@ extension Favorite{
             return nil
         }
         let managedContext =
-            appDelegate.persistentContainer.viewContext
+            appDelegate.managedObjectContext
         let fetchRequest =
             NSFetchRequest<Favorite>(entityName: "Favorite")
         do {

@@ -10,7 +10,19 @@ import UIKit
 import FCAlertView
 import NVActivityIndicatorView
 
-class MainViewController: UIViewController,UISearchBarDelegate,UISearchControllerDelegate{
+extension UISearchBar{
+    func setCursorColor(color:UIColor){
+        for view in self.subviews.first!.subviews
+        {
+            if view.isKind(of: UITextField.self)
+            {
+                view.tintColor = color
+                break
+            }
+        }
+    }
+}
+class MainViewController: UIViewController,UISearchControllerDelegate{
     @IBOutlet weak var pizza: UIImageView!
     var searchController:UISearchController?
     var searchResultTVC:SearchResultTableViewController?
@@ -26,10 +38,11 @@ class MainViewController: UIViewController,UISearchBarDelegate,UISearchControlle
         // Do any additional setup after loading the view, typically from a nib.
         self.searchController = UISearchController(searchResultsController: self.searchResultTVC)
         self.searchController?.delegate = self
-        self.searchController?.searchBar.delegate = self
+        self.searchController?.searchBar.delegate = self.searchResultTVC!
         self.searchController?.searchResultsUpdater = self.searchResultTVC
         self.searchController?.hidesNavigationBarDuringPresentation = false
         self.searchController?.searchBar.tintColor = UIColor.white
+        self.searchController?.searchBar.setCursorColor(color: UIColor.gray)
         self.definesPresentationContext = true
         
         //add click to pizze
@@ -99,7 +112,6 @@ class MainViewController: UIViewController,UISearchBarDelegate,UISearchControlle
             return
         }
         self.pizza.layer.removeAnimation(forKey: "rotate")
-        log.debug("stop pizza")
         self.performSegue(withIdentifier: "show-result", sender: self)
     }
     

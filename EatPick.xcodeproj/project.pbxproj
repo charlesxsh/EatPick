@@ -11,6 +11,11 @@
 		263BFEDE52C5B58F5FF76657 /* Pods_EatPick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4297EF6362EF17F88B71DB74 /* Pods_EatPick.framework */; };
 		4D0F06281E260BAE00D66BD1 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F06271E260BAE00D66BD1 /* SettingsTableViewController.swift */; };
 		4D0F062A1E26105800D66BD1 /* HelpFeedbackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0F06291E26105800D66BD1 /* HelpFeedbackTableViewController.swift */; };
+		4D362FAE1E2F1CF400B8D48B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D362FAD1E2F1CF400B8D48B /* Utils.swift */; };
+		4D362FB11E2F552D00B8D48B /* UserSetting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D362FB01E2F552D00B8D48B /* UserSetting.plist */; };
+		4D362FB41E2F559E00B8D48B /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D362FB31E2F559E00B8D48B /* UserSetting.swift */; };
+		4D362FB61E2F6B4600B8D48B /* PListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D362FB51E2F6B4600B8D48B /* PListManager.swift */; };
+		4D362FB81E2F6BA100B8D48B /* EatPickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D362FB71E2F6BA100B8D48B /* EatPickTests.swift */; };
 		4D488F0F1E27164900E88EF3 /* SHLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D488F0E1E27164900E88EF3 /* SHLocationManager.swift */; };
 		4D7D8BB81E22D20100A88118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D8BB71E22D20100A88118 /* AppDelegate.swift */; };
 		4D7D8BBA1E22D20100A88118 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D8BB91E22D20100A88118 /* MainViewController.swift */; };
@@ -18,12 +23,11 @@
 		4D7D8BBF1E22D20100A88118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D8BBD1E22D20100A88118 /* Main.storyboard */; };
 		4D7D8BC11E22D20100A88118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D8BC01E22D20100A88118 /* Assets.xcassets */; };
 		4D7D8BC41E22D20100A88118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D8BC21E22D20100A88118 /* LaunchScreen.storyboard */; };
-		4D7D8BCF1E22D20100A88118 /* EatPickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D8BCE1E22D20100A88118 /* EatPickTests.swift */; };
 		4D7D8BDA1E22D20100A88118 /* EatPickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D8BD91E22D20100A88118 /* EatPickUITests.swift */; };
 		4D7D8BE81E22D48000A88118 /* YelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D8BE71E22D48000A88118 /* YelpAPI.swift */; };
 		4D85FA251E244B87005C4D29 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D85FA241E244B87005C4D29 /* ArrayExtension.swift */; };
 		4DF3C9821E233CE5000DE8C8 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9811E233CE5000DE8C8 /* DictionaryExtension.swift */; };
-		4DF3C9841E233E04000DE8C8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9831E233E04000DE8C8 /* CustomButton.swift */; };
+		4DF3C9841E233E04000DE8C8 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9831E233E04000DE8C8 /* UIButtonExtension.swift */; };
 		4DF3C9C41E235E20000DE8C8 /* coreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9C21E235E20000DE8C8 /* coreData.xcdatamodeld */; };
 		4DF3C9C81E23606C000DE8C8 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9C71E23606C000DE8C8 /* FavoriteTableViewController.swift */; };
 		4DF3C9CC1E236250000DE8C8 /* FavoriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3C9CB1E236250000DE8C8 /* FavoriteExtension.swift */; };
@@ -58,6 +62,11 @@
 		4297EF6362EF17F88B71DB74 /* Pods_EatPick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatPick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D0F06271E260BAE00D66BD1 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		4D0F06291E26105800D66BD1 /* HelpFeedbackTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpFeedbackTableViewController.swift; sourceTree = "<group>"; };
+		4D362FAD1E2F1CF400B8D48B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		4D362FB01E2F552D00B8D48B /* UserSetting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserSetting.plist; sourceTree = "<group>"; };
+		4D362FB31E2F559E00B8D48B /* UserSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSetting.swift; sourceTree = "<group>"; };
+		4D362FB51E2F6B4600B8D48B /* PListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PListManager.swift; sourceTree = "<group>"; };
+		4D362FB71E2F6BA100B8D48B /* EatPickTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EatPickTests.swift; sourceTree = "<group>"; };
 		4D488F0E1E27164900E88EF3 /* SHLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHLocationManager.swift; sourceTree = "<group>"; };
 		4D57EE2A1E2975E0001E90B0 /* coreData 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "coreData 2.xcdatamodel"; sourceTree = "<group>"; };
 		4D5AE35A535ABFF0102D148D /* Pods-EatPickTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPickTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatPickTests/Pods-EatPickTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,7 +79,6 @@
 		4D7D8BC31E22D20100A88118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D7D8BC51E22D20100A88118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D7D8BCA1E22D20100A88118 /* EatPickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EatPickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D7D8BCE1E22D20100A88118 /* EatPickTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatPickTests.swift; sourceTree = "<group>"; };
 		4D7D8BD01E22D20100A88118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D7D8BD51E22D20100A88118 /* EatPickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EatPickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7D8BD91E22D20100A88118 /* EatPickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatPickUITests.swift; sourceTree = "<group>"; };
@@ -78,7 +86,7 @@
 		4D7D8BE71E22D48000A88118 /* YelpAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPI.swift; sourceTree = "<group>"; };
 		4D85FA241E244B87005C4D29 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		4DF3C9811E233CE5000DE8C8 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
-		4DF3C9831E233E04000DE8C8 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		4DF3C9831E233E04000DE8C8 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		4DF3C9C31E235E20000DE8C8 /* coreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreData.xcdatamodel; sourceTree = "<group>"; };
 		4DF3C9C71E23606C000DE8C8 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		4DF3C9CB1E236250000DE8C8 /* FavoriteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteExtension.swift; sourceTree = "<group>"; };
@@ -131,11 +139,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D362FB21E2F559000B8D48B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D362FB31E2F559E00B8D48B /* UserSetting.swift */,
+				4D362FB51E2F6B4600B8D48B /* PListManager.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		4D488F0D1E2715F500E88EF3 /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				4D7D8BE71E22D48000A88118 /* YelpAPI.swift */,
 				4D488F0E1E27164900E88EF3 /* SHLocationManager.swift */,
+				4D362FAD1E2F1CF400B8D48B /* Utils.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -165,6 +183,7 @@
 		4D7D8BB61E22D20100A88118 /* EatPick */ = {
 			isa = PBXGroup;
 			children = (
+				4D362FB21E2F559000B8D48B /* Model */,
 				4D488F0D1E2715F500E88EF3 /* Util */,
 				4DF3C9CD1E236255000DE8C8 /* Extension */,
 				4DF3C9CA1E236114000DE8C8 /* Storyboard */,
@@ -172,8 +191,8 @@
 				4D7D8BB71E22D20100A88118 /* AppDelegate.swift */,
 				4D7D8BC01E22D20100A88118 /* Assets.xcassets */,
 				4D7D8BC51E22D20100A88118 /* Info.plist */,
-				4DF3C9831E233E04000DE8C8 /* CustomButton.swift */,
 				4DF3C9C21E235E20000DE8C8 /* coreData.xcdatamodeld */,
+				4D362FB01E2F552D00B8D48B /* UserSetting.plist */,
 			);
 			path = EatPick;
 			sourceTree = "<group>";
@@ -181,7 +200,7 @@
 		4D7D8BCD1E22D20100A88118 /* EatPickTests */ = {
 			isa = PBXGroup;
 			children = (
-				4D7D8BCE1E22D20100A88118 /* EatPickTests.swift */,
+				4D362FB71E2F6BA100B8D48B /* EatPickTests.swift */,
 				4D7D8BD01E22D20100A88118 /* Info.plist */,
 			);
 			path = EatPickTests;
@@ -221,6 +240,7 @@
 		4DF3C9CD1E236255000DE8C8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4DF3C9831E233E04000DE8C8 /* UIButtonExtension.swift */,
 				4DF3C9811E233CE5000DE8C8 /* DictionaryExtension.swift */,
 				4DF3C9CB1E236250000DE8C8 /* FavoriteExtension.swift */,
 				4DF3C9D01E243572000DE8C8 /* UITableViewExtension.swift */,
@@ -380,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D362FB11E2F552D00B8D48B /* UserSetting.plist in Resources */,
 				4D7D8BC41E22D20100A88118 /* LaunchScreen.storyboard in Resources */,
 				4D7D8BC11E22D20100A88118 /* Assets.xcassets in Resources */,
 				4D7D8BBF1E22D20100A88118 /* Main.storyboard in Resources */,
@@ -550,8 +571,9 @@
 				4DF3C9C81E23606C000DE8C8 /* FavoriteTableViewController.swift in Sources */,
 				4D85FA251E244B87005C4D29 /* ArrayExtension.swift in Sources */,
 				4D7D8BBC1E22D20100A88118 /* SearchResultTableViewController.swift in Sources */,
-				4DF3C9841E233E04000DE8C8 /* CustomButton.swift in Sources */,
+				4DF3C9841E233E04000DE8C8 /* UIButtonExtension.swift in Sources */,
 				4DF3C9D11E243572000DE8C8 /* UITableViewExtension.swift in Sources */,
+				4D362FAE1E2F1CF400B8D48B /* Utils.swift in Sources */,
 				4D0F062A1E26105800D66BD1 /* HelpFeedbackTableViewController.swift in Sources */,
 				4DF3C9821E233CE5000DE8C8 /* DictionaryExtension.swift in Sources */,
 				4D7D8BB81E22D20100A88118 /* AppDelegate.swift in Sources */,
@@ -559,6 +581,8 @@
 				4DF3C9C41E235E20000DE8C8 /* coreData.xcdatamodeld in Sources */,
 				4D0F06281E260BAE00D66BD1 /* SettingsTableViewController.swift in Sources */,
 				4DF3C9CC1E236250000DE8C8 /* FavoriteExtension.swift in Sources */,
+				4D362FB41E2F559E00B8D48B /* UserSetting.swift in Sources */,
+				4D362FB61E2F6B4600B8D48B /* PListManager.swift in Sources */,
 				4D7D8BBA1E22D20100A88118 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,7 +591,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D7D8BCF1E22D20100A88118 /* EatPickTests.swift in Sources */,
+				4D362FB81E2F6BA100B8D48B /* EatPickTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,7 +678,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -697,7 +721,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -713,6 +737,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = J8TELHFDPB;
 				INFOPLIST_FILE = EatPick/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shihao.Where2Eat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -728,6 +753,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = J8TELHFDPB;
 				INFOPLIST_FILE = EatPick/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shihao.Where2Eat;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -32,13 +32,11 @@ class HelpFeedbackTableViewController: UITableViewController {
         }
         switch cellType {
         case .email:
-            if let url = URL(string: "mailto://charlesxiash@gmail.com") {
-                UIApplication.shared.open(url, options: [:], completionHandler: { (isSuccess) in
-                    if !isSuccess{
-                        log.error("Cannot open email")
-                    }
-                })
-            }
+            Util.UIApplicationOpen(url:URL(string: "mailto://charlesxiash@gmail.com")!, options: [:], completionHandler: { (isSuccess) in
+                if !isSuccess{
+                    log.error("Cannot open email")
+                }
+            })
         }
     }
    
