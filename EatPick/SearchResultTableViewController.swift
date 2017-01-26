@@ -52,7 +52,7 @@ class SRCell:UITableViewCell{
     
     @IBAction func onAddClick(_ sender:AnyObject?){
         self.add.runIndicatorWith { 
-            guard let newFavorite = Favorite.newObject() else{
+            guard let newFavorite = Favorite.newObjectWithContext() else{
                 log.error("Create favorite failed")
                 return
             }

@@ -21,11 +21,15 @@ class SHLocationRequest{
     
     init(manager:SHLocationManager) {
         self.manager = manager
+        if self.manager?.currentLocation == nil {
+            self.manager?.startUpdatingLocation()
+        }
     }
     
     @objc private func tryToGetLocation(){
         if timeOut! <= 0.0 {
             callback?(nil)
+            SHLocationManager.whenCannotGetLocation?()
             self.timer?.invalidate()
         }
         if manager!.currentLocation != nil{
@@ -47,6 +51,8 @@ class SHLocationManager:NSObject{
     private static let sharedInstance = SHLocationManager()
     public var currentLocation:CLLocationCoordinate2D?
     
+    public static var whenCannotGetLocation:(()->Void)?
+    
     private override init() {
         super.init()
         log.debug("SHLocationManager init()")
@@ -60,6 +66,10 @@ class SHLocationManager:NSObject{
         return req
     }
     
+    fileprivate func startUpdatingLocation(){
+        self._locationManager.startUpdatingLocation()
+    }
+    
     static func instance()->SHLocationManager{
         return self.sharedInstance
     }
@@ -70,19 +80,14 @@ class SHLocationManager:NSObject{
     }
     
     static func showOpenGPSMessage(){
-        let alert = UIAlertController(title: "Hi", message: "I would like to know you current location", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Go to Settings now", style: UIAlertActionStyle.default, handler: { (alert: UIAlertAction!) in
-            Util.UIApplicationOpen(url: URL(string:UIApplicationOpenSettingsURLString)!)
-        }))
-        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        alert.addAction(cancelButton)
-        UIApplication.shared.delegate?.window!?.rootViewController?.present(alert, animated: true, completion: nil)
-
+        let rootViewController = UIApplication.shared.delegate?.window!?.rootViewController
+        MessageCenter.instance().show(In: rootViewController!, title: "Hi", message: "I would like to know you current location", buttons: ["Go to Setting"], closures: [{
+                Util.UIApplicationOpen(url: URL(string:UIApplicationOpenSettingsURLString)!)
+            }])
     }
     
     
     func getCurrentLocation(Timeout timeOut:Double, callback:@escaping GetLocation){
-        self._locationManager.startUpdatingLocation()
         let newReq = self.getNewLocationRequest()
         newReq.timeOut = timeOut
         newReq.callback = callback

@@ -7,12 +7,15 @@
 //
 
 import XCTest
+import Alamofire
+import XCGLogger
 @testable import EatPick
 
 class EatPickTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -22,9 +25,8 @@ class EatPickTests: XCTestCase {
     }
     
     func testExample() {
-        let us = UserSetting.instance()
-        us.set(value:"abc", ForKey key:.searchPreference.key)
-        XCTAssertEqual(us.get<String>(ByKey: .searchPreference.key), "abc")
+
+        
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         }
@@ -32,9 +34,7 @@ class EatPickTests: XCTestCase {
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
-            let us = UserSetting.instance()
-            us.set(value:"abc", ForKey key:UserSettingKey.searchPreference.key)
-
+           
             // Put the code you want to measure the time of here.
         }
     }

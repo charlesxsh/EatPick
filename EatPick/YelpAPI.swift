@@ -36,12 +36,14 @@ class YelpAPI{
     
     init() {}
     
-    public func businessSearch(With term:String, Option options:[String:Any]? = nil, Location currentLocation:CLLocationCoordinate2D, handler:@escaping (DataResponse<Any>) -> Void)->DataRequest{
+    public func businessSearch(With term:String?, Option options:[String:Any]? = nil, Location currentLocation:CLLocationCoordinate2D, handler:@escaping (DataResponse<Any>) -> Void)->DataRequest{
         let url = "\(self.baseUrl)/businesses/search"
         var parameters:[String:Any] = [:]
         parameters["latitude"] = currentLocation.latitude
         parameters["longitude"] = currentLocation.longitude
-        parameters["term"] = term
+        if term != nil{
+            parameters["term"] = term
+        }
         if options != nil{
             parameters.merge(dictionaries: options!)
         }

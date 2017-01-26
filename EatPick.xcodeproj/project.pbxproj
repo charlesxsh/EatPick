@@ -16,6 +16,10 @@
 		4D362FB41E2F559E00B8D48B /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D362FB31E2F559E00B8D48B /* UserSetting.swift */; };
 		4D362FB61E2F6B4600B8D48B /* PListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D362FB51E2F6B4600B8D48B /* PListManager.swift */; };
 		4D362FB81E2F6BA100B8D48B /* EatPickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D362FB71E2F6BA100B8D48B /* EatPickTests.swift */; };
+		4D362FBA1E2F712B00B8D48B /* SettingsPreferenceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D362FB91E2F712B00B8D48B /* SettingsPreferenceTableViewController.swift */; };
+		4D362FBC1E317D6400B8D48B /* MessageCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D362FBB1E317D6400B8D48B /* MessageCenter.swift */; };
+		4D362FBE1E318A5800B8D48B /* RandomPickBusinessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D362FBD1E318A5800B8D48B /* RandomPickBusinessController.swift */; };
+		4D362FC01E3190A900B8D48B /* UISearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D362FBF1E3190A900B8D48B /* UISearchBarExtension.swift */; };
 		4D488F0F1E27164900E88EF3 /* SHLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D488F0E1E27164900E88EF3 /* SHLocationManager.swift */; };
 		4D7D8BB81E22D20100A88118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D8BB71E22D20100A88118 /* AppDelegate.swift */; };
 		4D7D8BBA1E22D20100A88118 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D8BB91E22D20100A88118 /* MainViewController.swift */; };
@@ -67,6 +71,10 @@
 		4D362FB31E2F559E00B8D48B /* UserSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSetting.swift; sourceTree = "<group>"; };
 		4D362FB51E2F6B4600B8D48B /* PListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PListManager.swift; sourceTree = "<group>"; };
 		4D362FB71E2F6BA100B8D48B /* EatPickTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EatPickTests.swift; sourceTree = "<group>"; };
+		4D362FB91E2F712B00B8D48B /* SettingsPreferenceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPreferenceTableViewController.swift; sourceTree = "<group>"; };
+		4D362FBB1E317D6400B8D48B /* MessageCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCenter.swift; sourceTree = "<group>"; };
+		4D362FBD1E318A5800B8D48B /* RandomPickBusinessController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomPickBusinessController.swift; sourceTree = "<group>"; };
+		4D362FBF1E3190A900B8D48B /* UISearchBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBarExtension.swift; sourceTree = "<group>"; };
 		4D488F0E1E27164900E88EF3 /* SHLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHLocationManager.swift; sourceTree = "<group>"; };
 		4D57EE2A1E2975E0001E90B0 /* coreData 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "coreData 2.xcdatamodel"; sourceTree = "<group>"; };
 		4D5AE35A535ABFF0102D148D /* Pods-EatPickTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatPickTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatPickTests/Pods-EatPickTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +152,7 @@
 			children = (
 				4D362FB31E2F559E00B8D48B /* UserSetting.swift */,
 				4D362FB51E2F6B4600B8D48B /* PListManager.swift */,
+				4D362FBD1E318A5800B8D48B /* RandomPickBusinessController.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -154,6 +163,7 @@
 				4D7D8BE71E22D48000A88118 /* YelpAPI.swift */,
 				4D488F0E1E27164900E88EF3 /* SHLocationManager.swift */,
 				4D362FAD1E2F1CF400B8D48B /* Utils.swift */,
+				4D362FBB1E317D6400B8D48B /* MessageCenter.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -224,6 +234,7 @@
 				4DF3C9CE1E24289B000DE8C8 /* BusinessDetailTableViewController.swift */,
 				4D0F06271E260BAE00D66BD1 /* SettingsTableViewController.swift */,
 				4D0F06291E26105800D66BD1 /* HelpFeedbackTableViewController.swift */,
+				4D362FB91E2F712B00B8D48B /* SettingsPreferenceTableViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -245,6 +256,7 @@
 				4DF3C9CB1E236250000DE8C8 /* FavoriteExtension.swift */,
 				4DF3C9D01E243572000DE8C8 /* UITableViewExtension.swift */,
 				4D85FA241E244B87005C4D29 /* ArrayExtension.swift */,
+				4D362FBF1E3190A900B8D48B /* UISearchBarExtension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -568,19 +580,23 @@
 			files = (
 				4D7D8BE81E22D48000A88118 /* YelpAPI.swift in Sources */,
 				4DF3C9CF1E24289B000DE8C8 /* BusinessDetailTableViewController.swift in Sources */,
+				4D362FBE1E318A5800B8D48B /* RandomPickBusinessController.swift in Sources */,
 				4DF3C9C81E23606C000DE8C8 /* FavoriteTableViewController.swift in Sources */,
 				4D85FA251E244B87005C4D29 /* ArrayExtension.swift in Sources */,
 				4D7D8BBC1E22D20100A88118 /* SearchResultTableViewController.swift in Sources */,
 				4DF3C9841E233E04000DE8C8 /* UIButtonExtension.swift in Sources */,
 				4DF3C9D11E243572000DE8C8 /* UITableViewExtension.swift in Sources */,
+				4D362FBA1E2F712B00B8D48B /* SettingsPreferenceTableViewController.swift in Sources */,
 				4D362FAE1E2F1CF400B8D48B /* Utils.swift in Sources */,
 				4D0F062A1E26105800D66BD1 /* HelpFeedbackTableViewController.swift in Sources */,
+				4D362FC01E3190A900B8D48B /* UISearchBarExtension.swift in Sources */,
 				4DF3C9821E233CE5000DE8C8 /* DictionaryExtension.swift in Sources */,
 				4D7D8BB81E22D20100A88118 /* AppDelegate.swift in Sources */,
 				4D488F0F1E27164900E88EF3 /* SHLocationManager.swift in Sources */,
 				4DF3C9C41E235E20000DE8C8 /* coreData.xcdatamodeld in Sources */,
 				4D0F06281E260BAE00D66BD1 /* SettingsTableViewController.swift in Sources */,
 				4DF3C9CC1E236250000DE8C8 /* FavoriteExtension.swift in Sources */,
+				4D362FBC1E317D6400B8D48B /* MessageCenter.swift in Sources */,
 				4D362FB41E2F559E00B8D48B /* UserSetting.swift in Sources */,
 				4D362FB61E2F6B4600B8D48B /* PListManager.swift in Sources */,
 				4D7D8BBA1E22D20100A88118 /* MainViewController.swift in Sources */,

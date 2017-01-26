@@ -20,6 +20,20 @@ enum UserSettingKey:UInt8{
     }
 }
 
+enum SearchPreference:UInt8{
+    case randomFromNearby = 0
+    case randomFromFavorite = 1
+    
+    var userDescription:String{
+        switch self {
+        case .randomFromFavorite:
+            return "Pick From Favorite"
+        case .randomFromNearby:
+            return "Pick From Nearby"
+        }
+    }
+}
+
 class UserSetting: PListManager {
     private static let sharedInstance = UserSetting()
     
@@ -31,9 +45,7 @@ class UserSetting: PListManager {
         return sharedInstance
     }
     
-    func get<T>(ByKey key:UserSettingKey)->T{
-        return self.plistFiledata[key.key] as! T
-    }
+
     
     func set(value:Any, ForKey key:UserSettingKey){
         set(key: key.key, value: value)

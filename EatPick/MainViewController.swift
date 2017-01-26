@@ -9,25 +9,17 @@
 import UIKit
 import FCAlertView
 import NVActivityIndicatorView
+import CoreLocation
+import Alamofire
 
-extension UISearchBar{
-    func setCursorColor(color:UIColor){
-        for view in self.subviews.first!.subviews
-        {
-            if view.isKind(of: UITextField.self)
-            {
-                view.tintColor = color
-                break
-            }
-        }
-    }
-}
+
 class MainViewController: UIViewController,UISearchControllerDelegate{
     @IBOutlet weak var pizza: UIImageView!
     var searchController:UISearchController?
     var searchResultTVC:SearchResultTableViewController?
     var originalTitleView:UIView?
     var pickedFavorite:Favorite?
+    
     @IBOutlet weak var processIndicator:NVActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,34 +41,34 @@ class MainViewController: UIViewController,UISearchControllerDelegate{
         let pizzaTagGesture = UITapGestureRecognizer(target: self, action: #selector(onClickPizza(_:)))
         self.pizza.addGestureRecognizer(pizzaTagGesture)        
         NVActivityIndicatorView.DEFAULT_BLOCKER_MESSAGE = "Getting location"
+        
+        
+        Alamofire.request("https://the-one-server.herokuapp.com/user", method: .post, parameters:
+            ["email": "xshxsh@gmail.com"], encoding: JSONEncoding.default, headers: ["Content-Type":"application/json"]).responseJSON(completionHandler: { (response) in
+                switch response.result{
+                case .success(let value):
+                    log.debug(value)
+                case .failure(let error):
+                    log.error(error.localizedDescription)
+                }
+                
+            })
     }
     
     @IBAction func onClickSearch(_ sender: Any) {
         if !self.searchController!.isActive{
             processIndicator.startAnimating()
             let locationManager = SHLocationManager.instance()
-            if locationManager.currentLocation == nil{
+            if locationManager.currentLocation == nil {
                 locationManager.getCurrentLocation(Timeout: 3, callback: { (location) in
                     if location != nil{
                         self.showSearchResultController()
-                    }else {
-                        let alert = FCAlertView()
-                        alert.autoHideSeconds = 3
-                        alert.cornerRadius = 0
-                        alert.colorScheme = UIColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1)
-                        alert.showAlert(inView: self,
-                                        withTitle: "Oh",
-                                        withSubtitle: "Can not get your current location",
-                                        withCustomImage: nil,
-                                        withDoneButtonTitle: "I got it!",
-                                        andButtons: nil)
                     }
-                    self.processIndicator.stopAnimating()
                 })
             }else{
-                processIndicator.stopAnimating()
                 self.showSearchResultController()
             }
+            processIndicator.stopAnimating()
         }
     }
     
@@ -86,33 +78,22 @@ class MainViewController: UIViewController,UISearchControllerDelegate{
         present(self.searchController!, animated: true, completion: nil)
     }
     
-    
-    func onClickPizza(_ sender:Any){
+    func startPickingAnimation(){
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotationAnimation.fromValue = 0.0
         rotationAnimation.toValue = 2*M_PI
         rotationAnimation.duration = 1.0
         rotationAnimation.repeatCount = 2
         self.pizza.layer.add(rotationAnimation, forKey: "rotate")
-        
-        
-        self.pickedFavorite = Favorite.randomPickOne()
-        if self.pickedFavorite == nil {
-            self.pizza.layer.removeAnimation(forKey: "rotate")
-            let alert = FCAlertView()
-            alert.autoHideSeconds = 3
-            alert.cornerRadius = 0
-            alert.colorScheme = UIColor(red: 46/255, green: 204/255, blue: 113/255, alpha: 1)
-            alert.showAlert(inView: self,
-                            withTitle: "Oh",
-                            withSubtitle: "You don't have any favorite restaurant currently",
-                            withCustomImage: nil,
-                            withDoneButtonTitle: "I got it!",
-                            andButtons: nil)
-            return
-        }
+    }
+    
+    func stopPickingAnimatino(){
         self.pizza.layer.removeAnimation(forKey: "rotate")
-        self.performSegue(withIdentifier: "show-result", sender: self)
+    }
+    
+    
+    func onClickPizza(_ sender:Any){
+        RandomPickBusinessController(delegate: self).process()
     }
     
     func didDismissSearchController(_ searchController: UISearchController) {
@@ -128,8 +109,26 @@ class MainViewController: UIViewController,UISearchControllerDelegate{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! BusinessDetailTableViewController
         dest.targetFavorite = self.pickedFavorite
+        self.pickedFavorite = nil
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if self.pickedFavorite != nil {
+            return true
+        }
+        return false
+    }
     
+}
+
+extension MainViewController:RandomPickBusinessControllerDelegate{
+    func startRandomPick() {
+        startPickingAnimation()
+    }
+    func pickedRandom(favorite: Favorite?) {
+        stopPickingAnimatino()
+        self.pickedFavorite = favorite
+        self.performSegue(withIdentifier: "show-result", sender: self)
+    }
 }
 

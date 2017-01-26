@@ -35,6 +35,15 @@ class PListManager{
         }
     }
     
+    public func getString(ByKey key:String)->String{
+        return self.plistFiledata[key] as? String ?? ""
+    }
+    
+
+    public func get(ByKey key:String)->Any?{
+        return self.plistFiledata[key]
+    }
+    
     internal func set(key:String, value:Any){
         self.plistFiledata[key] = value
         self.isChanged = true

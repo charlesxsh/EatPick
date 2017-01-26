@@ -13,7 +13,8 @@ class RRCell:UITableViewCell{
     @IBOutlet weak var name:UILabel!
     @IBOutlet weak var map:MKMapView!
     @IBOutlet weak var address:UILabel!
-    var favorite:Favorite?{
+    
+    public var favorite:Favorite?{
         didSet{
             guard let favorite = self.favorite else {
                 return
@@ -23,7 +24,7 @@ class RRCell:UITableViewCell{
             let annotation = MKPointAnnotation()
             let centerCoordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(favorite.latitude), longitude:CLLocationDegrees(favorite.longitude))
             annotation.coordinate = centerCoordinate
-            annotation.title = favorite.name!
+            annotation.title = self.name.text
             map.addAnnotation(annotation)
             map.showsUserLocation = true
             let region = MKCoordinateRegion(center: centerCoordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
@@ -31,7 +32,9 @@ class RRCell:UITableViewCell{
             map.setRegion(adjustRegion, animated: true)
         }
     }
+    
 }
+
 
 class RRPhoneCell:UITableViewCell{
     @IBOutlet weak var phone:UITextView!
@@ -63,6 +66,7 @@ enum CellID:UInt8{
 class BusinessDetailTableViewController: UITableViewController {
 
     var targetFavorite:Favorite?
+    
     let cellTemplates = [CellID.meta, CellID.phoneButton, CellID.locationButton]
     override func viewDidLoad() {
         super.viewDidLoad()

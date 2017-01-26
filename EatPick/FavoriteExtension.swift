@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 extension Favorite{
-    public static func newObject()->Favorite?{
+    public static func newObjectWithContext()->Favorite?{
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             log.error("Cannot get app delegate")
             return nil
@@ -18,6 +18,39 @@ extension Favorite{
         let managedContext = appDelegate.managedObjectContext
         let entity = NSEntityDescription.entity(forEntityName: "Favorite", in: managedContext)
         let newFavorite = Favorite(entity: entity!, insertInto: managedContext)
+        return newFavorite
+    }
+    
+    public static func newObject(WithYelpBusinessJson businessObject:[String:Any])->Favorite?{
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            log.error("Cannot get app delegate")
+            return nil
+        }
+        let managedContext = appDelegate.managedObjectContext
+        let entity = NSEntityDescription.entity(forEntityName: "Favorite", in: managedContext)
+        let newFavorite = Favorite(entity: entity!, insertInto: nil)
+        let locationObject = businessObject["location"] as! [String:AnyObject]
+        let address = locationObject.getString(By: "address1")
+        let city = locationObject.getString(By: "city")
+        let state = locationObject.getString(By: "state")
+        newFavorite.address = "\(address), \(city), \(state)"
+        newFavorite.name = businessObject.getString(By: "name")
+        newFavorite.businessId = businessObject.getString(By: "id")
+        
+        newFavorite.photoUrl =  businessObject.getString(By: "image_url")
+        let coordinates = businessObject["coordinates"] as! [String:AnyObject]
+        newFavorite.latitude = coordinates["latitude"] as! Float
+        newFavorite.longitude = coordinates["longitude"] as! Float
+        
+        newFavorite.phone = businessObject.getString(By: "phone")
+        
+        let categories = businessObject["categories"] as! [[String:String]]
+        var cateString = ""
+        for c in categories{
+            cateString.append("\(c["title"]!) & ")
+        }
+        cateString.remove(at: cateString.index(cateString.endIndex, offsetBy: -2))
+        newFavorite.category =  cateString
         return newFavorite
     }
     

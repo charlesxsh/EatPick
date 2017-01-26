@@ -21,4 +21,10 @@ class Util {
         }
 
     }
+    
+    static func showPopupMessage(In viewController:UIViewController, message:String){
+        
+    }
+    
+    
 }
